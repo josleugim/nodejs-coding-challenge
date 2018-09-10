@@ -1,7 +1,8 @@
 'use strict';
 const mongoose = require('mongoose'),
     User = mongoose.model('User'),
-    encrypt = require('../services/encrypto');
+    encrypt = require('../services/encrypto'),
+    validations = require('../services/validations');
 
 /**
  * Handles the POST method, to store user data
@@ -11,7 +12,7 @@ const mongoose = require('mongoose'),
 exports.post = (req, res) => {
     console.log('POST User');
     let data = {};
-    if(req.body.email) {
+    if(req.body.email && typeof validations.emailFormat(req.body.email)  === 'undefined') {
         data.email = req.body.email;
     }
 
