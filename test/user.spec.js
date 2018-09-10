@@ -8,7 +8,7 @@ const User = require('../server/models/User'),
 
 describe('User validations', () => {
     after(function() {
-        //process.exit();
+        process.exit();
     });
 
     before(function () {

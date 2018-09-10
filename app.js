@@ -18,3 +18,9 @@ require('./server/routes/v1/home')(app, config);
 app.listen(config.port, function () {
     console.log('Gulp is running the API on PORT: ' + config.port);
 });
+
+/**
+ * Export the Express app so that it can be used by Chai
+ * ¡Important: Only for development, comment line in other environment!
+ */
+module.exports = app;
