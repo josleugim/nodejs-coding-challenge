@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-coding-challenge",
+  "version": "1.0.0",
+  "description": "Coding challenge for Mati",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josleugim/nodejs-coding-challenge.git"
+  },
+  "author": "josleugim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josleugim/nodejs-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/josleugim/nodejs-coding-challenge#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-nodemon": "^2.2.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.14",
+    "mongoose-timestamp": "^0.6.0",
+    "path": "^0.12.7"
+  }
+}
