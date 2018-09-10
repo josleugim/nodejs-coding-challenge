@@ -13,7 +13,7 @@ require('./server/routes/v1/user')(app, config);
 
 require('./server/routes/v1/auth')(app, config);
 
-require('./server/routes/v1/home')(app, config);
+require('./server/routes/v1/hello')(app, config);
 
 app.listen(config.port, function () {
     console.log('Gulp is running the API on PORT: ' + config.port);

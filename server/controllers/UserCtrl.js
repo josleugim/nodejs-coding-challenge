@@ -11,7 +11,7 @@ const mongoose = require('mongoose'),
  * @param res
  */
 exports.post = (req, res) => {
-    console.log('POST User');
+    // console.log('POST User');
     let data = {};
     if(req.body.email && typeof validations.emailFormat(req.body.email)  === 'undefined') {
         data.email = req.body.email;
@@ -48,7 +48,7 @@ exports.post = (req, res) => {
  * @param res
  */
 exports.auth = (req, res) => {
-    console.log('POST Auth');
+    // console.log('POST Auth');
     const resData = {
         success: true
     };

@@ -2,6 +2,9 @@
 const mongoose = require('mongoose'),
     timestamps = require('mongoose-timestamp');
 
+/**
+ * Model for the Users
+ */
 const UserSchema = mongoose.Schema({
     email: {
         type: String,
