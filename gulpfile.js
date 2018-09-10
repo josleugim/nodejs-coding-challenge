@@ -6,9 +6,10 @@ const gulp = require('gulp'),
         rename: {
             'gulp-live-server': 'serve'
         }
-    });
+    }),
+    exec = require('child_process').exec;
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['start-mongo', 'serve']);
 
 gulp.task('serve', function () {
     nodemon({
@@ -26,3 +27,15 @@ gulp.task('serve', function () {
             console.log('Nodemon started');
         })
 });
+
+gulp.task('start-mongo', startService('mongod'));
+
+function startService(command) {
+    return function (callback) {
+        exec(command, function (err, stdout, stderr) {
+            console.log(stdout);
+            console.log(stderr);
+            callback(err);
+        });
+    }
+}
