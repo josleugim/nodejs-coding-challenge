@@ -11,6 +11,8 @@ require('./server/config/mongoose')(config);
 
 require('./server/routes/v1/user')(app, config);
 
+require('./server/routes/v1/auth')(app, config);
+
 require('./server/routes/v1/home')(app, config);
 
 app.listen(config.port, function () {
